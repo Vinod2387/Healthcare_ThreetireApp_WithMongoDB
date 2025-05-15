@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patients</title>
+</head>
+<body>
+    <h2>Register New Patient</h2>
+    <form method="POST">
+        Name: <input name="name"><br>
+        Age: <input name="age"><br>
+        Condition: <input name="condition"><br>
+        <button type="submit">Add Patient</button>
+    </form>
+    <h3>All Patients</h3>
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient.name }} ({{ patient.age }}): {{ patient.condition }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

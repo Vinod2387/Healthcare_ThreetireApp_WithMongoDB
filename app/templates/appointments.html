@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointments</title>
+</head>
+<body>
+    <h2>Schedule Appointment</h2>
+    <form method="POST">
+        Patient Name: <input name="patient_name"><br>
+        Date: <input name="date"><br>
+        Doctor: <input name="doctor"><br>
+        <button type="submit">Schedule</button>
+    </form>
+    <h3>Upcoming Appointments</h3>
+    <ul>
+        {% for appointment in appointments %}
+            <li>{{ appointment.date }} - {{ appointment.patient_name }} with Dr. {{ appointment.doctor }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
